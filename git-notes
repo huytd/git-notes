@@ -1,0 +1,8 @@
+#!/bin/bash
+cd $GITNOTES_PATH
+CURRENT_STATUS=$(git status -s)
+if [[ "$CURRENT_STATUS" != "" ]]; then
+  git add -A
+  git commit -m "Automatically update"
+  git push
+fi

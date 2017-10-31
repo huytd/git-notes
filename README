@@ -1,0 +1,21 @@
+# Automated Git Notes
+
+The script that run every few minutes to backup your git repository.
+
+- SETUP ENVIRONMENT VARIABLE
+
+Add GITNOTES_PATH as your environment variables:
+
+    export GITNOTES_PATH=~/notes
+
+The target folder should be a git repository.
+
+- INSTALL THE SCRIPT
+
+    $ ln -s $(PWD)/git-notes /usr/local/bin
+
+- SETUP CRONJOB
+
+    $ crontab -e
+    
+    */5 * * * * git-notes
